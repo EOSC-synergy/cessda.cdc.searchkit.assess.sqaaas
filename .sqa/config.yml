@@ -1,0 +1,60 @@
+config:
+  credentials: []
+  project_repos:
+    bitbucket.org/cessda/cessda.cdc.searchkit:
+      branch: master
+      repo: https://bitbucket.org/cessda/cessda.cdc.searchkit
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.4
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      bitbucket.org/cessda/cessda.cdc.searchkit git:
+        commands:
+        - /usr/bin/env sh .sqa/script.fuzzy-sangria-earwig.sh
+        container: qc.acc_crappy-purple-abyssinian
+  QC.Doc:
+    repos:
+      bitbucket.org/cessda/cessda.cdc.searchkit find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.gimpy-dandelion-ferret.sh
+        container: qc.doc_squirrely-thistle-wolverine
+      bitbucket.org/cessda/cessda.cdc.searchkit git:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-saffron-yak.sh
+        container: qc.doc_bumpy-carmine-seahorse
+      bitbucket.org/cessda/cessda.cdc.searchkit markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.fuzzy-puce-kiwi.sh
+        container: qc.doc_ugly-magenta-catfish
+  QC.Lic:
+    repos:
+      bitbucket.org/cessda/cessda.cdc.searchkit licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.thirsty-gamboge-liger.sh
+        container: qc.lic_snoopy-red-ferret
+  QC.Sty:
+    repos:
+      bitbucket.org/cessda/cessda.cdc.searchkit hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.skimpy-xanthic-macaque.sh
+        container: qc.sty_leaky-sapphire-olm
+      bitbucket.org/cessda/cessda.cdc.searchkit jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-celadon-ray.sh
+        container: qc.sty_gimpy-cerulean-rabbit
+      bitbucket.org/cessda/cessda.cdc.searchkit stylelint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cranky-salmon-quokka.sh
+        container: qc.sty_greasy-malachite-armadillo
+  QC.Ver:
+    repos:
+      bitbucket.org/cessda/cessda.cdc.searchkit get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.messy-mustard-audemer.sh
+        container: qc.ver_snoopy-thistle-mastiff
+timeout: 1800
