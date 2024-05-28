@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.8
+      branch: release/2.0.1
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/cessda/cessda.cdc.searchkit:
       branch: main
@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda.cdc.searchkit git:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-cardinal-greyhound.sh
-        container: qc.acc_snappy-rust-spitz
+        - /usr/bin/env sh .sqa/script.woolly-rose-bandicoot.sh
+        container: qc.acc_clammy-orange-eagle
   QC.Doc:
     repos:
       github.com/cessda/cessda.cdc.searchkit find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.woozy-bistre-blue.sh
-        container: qc.doc_leaky-rust-abyssinian
+        - /usr/bin/env sh .sqa/script.woozy-azure-hound.sh
+        container: qc.doc_surly-cerulean-mist
       github.com/cessda/cessda.cdc.searchkit git:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-lemon-cow.sh
-        container: qc.doc_trippy-goldenrod-akita
+        - /usr/bin/env sh .sqa/script.stinky-aqua-impala.sh
+        container: qc.doc_paltry-persimmon-penguin
       github.com/cessda/cessda.cdc.searchkit markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-lime-shrimp.sh
-        container: qc.doc_snazzy-orchid-tang
+        - /usr/bin/env sh .sqa/script.frumpy-eggplant-warthog.sh
+        container: qc.doc_sickly-lavender-drever
   QC.Lic:
     repos:
       github.com/cessda/cessda.cdc.searchkit licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-myrtle-dunker.sh
-        container: qc.lic_skimpy-heliotrope-cassowary
+        - /usr/bin/env sh .sqa/script.beady-cinnabar-affenpinscher.sh
+        container: qc.lic_squirrely-periwinkle-alligator
   QC.Met:
     repos:
       github.com/cessda/cessda.cdc.searchkit cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-champagne-seal.sh
-        container: qc.met_baggy-periwinkle-rhinoceros
+        - /usr/bin/env sh .sqa/script.squeaky-gold-akbash.sh
+        container: qc.met_clammy-linen-coyote
   QC.Sty:
     repos:
       github.com/cessda/cessda.cdc.searchkit hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-magenta-bordeaux.sh
-        container: qc.sty_shaggy-green-hornet
+        - /usr/bin/env sh .sqa/script.craggy-grey-bongo.sh
+        container: qc.sty_muggy-dandelion-numbat
       github.com/cessda/cessda.cdc.searchkit jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-mustard-eleuth.sh
-        container: qc.sty_shaggy-russet-dollar
+        - /usr/bin/env sh .sqa/script.flimsy-amaranth-opossum.sh
+        container: qc.sty_wheezy-plum-octopus
   QC.Ver:
     repos:
       github.com/cessda/cessda.cdc.searchkit get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-zucchini-deer.sh
-        container: qc.ver_crabby-bistre-moth
+        - /usr/bin/env sh .sqa/script.nippy-platinum-millipede.sh
+        container: qc.ver_flabby-teal-tarsier
 timeout: 5400
