@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: main
+      branch: fix/updatego
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/cessda/cessda.cdc.searchkit:
       branch: main
@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda.cdc.searchkit git:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-sepia-wrasse.sh
-        container: qc.acc_homey-amaranth-gar
+        - /usr/bin/env sh .sqa/script.plum_sweet_hyena.sh
+        container: qc.acc_royal_courageous_puffin
   QC.Doc:
     repos:
       github.com/cessda/cessda.cdc.searchkit find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-brown-tiger.sh
-        container: qc.doc_hasty-gamboge-pinscher
+        - /usr/bin/env sh .sqa/script.heather_humorous_bat.sh
+        container: qc.doc_lemon_loving_okapi
       github.com/cessda/cessda.cdc.searchkit git:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-peach-cattle.sh
-        container: qc.doc_freaky-heliotrope-termite
+        - /usr/bin/env sh .sqa/script.sienna_energetic_turtle.sh
+        container: qc.doc_watermelon_sincere_swan
       github.com/cessda/cessda.cdc.searchkit markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-persimmon-hedgehog.sh
-        container: qc.doc_boozy-peach-angelfish
+        - /usr/bin/env sh .sqa/script.wisteria_forgiving_caribou.sh
+        container: qc.doc_echelon_wondrous_starfish
   QC.Lic:
     repos:
       github.com/cessda/cessda.cdc.searchkit licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-champagne-kingfisher.sh
-        container: qc.lic_crappy-zucchini-coati
+        - /usr/bin/env sh .sqa/script.forest_relaxed_hornbill.sh
+        container: qc.lic_rust_shrewd_dugong
   QC.Met:
     repos:
       github.com/cessda/cessda.cdc.searchkit cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-brown-buffalo.sh
-        container: qc.met_thirsty-viridian-albatross
+        - /usr/bin/env sh .sqa/script.gold_brilliant_hippopotamus.sh
+        container: qc.met_aquamarine_stoic_skunk
   QC.Sty:
     repos:
       github.com/cessda/cessda.cdc.searchkit hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-lemon-loon.sh
-        container: qc.sty_wimpy-orange-markhor
+        - /usr/bin/env sh .sqa/script.green_eager_gecko.sh
+        container: qc.sty_flamingo_thankful_peacock
       github.com/cessda/cessda.cdc.searchkit jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-gold-mule.sh
-        container: qc.sty_whiny-olivine-starfish
+        - /usr/bin/env sh .sqa/script.cinnamon_melancholy_piranha.sh
+        container: qc.sty_prussian_protective_iguana
   QC.Ver:
     repos:
       github.com/cessda/cessda.cdc.searchkit get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-indigo-fly.sh
-        container: qc.ver_nerdy-turquoise-bombay
+        - /usr/bin/env sh .sqa/script.raspberry_grumpy_chimpanzee.sh
+        container: qc.ver_pineapple_courageous_tapir
 timeout: 5400
